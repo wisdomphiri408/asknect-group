@@ -1,0 +1,338 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Import Roboto Font */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+  /* Set default font and colors */
+  html {
+    font-family: 'Roboto', sans-serif;
+    color: #000; /* Default text color black */
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    color: #000; /* Black */
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px */
+    font-weight: 700;
+    color: #111; /* Slightly lighter than black */
+  }
+
+  h3 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 600;
+    color: #222;
+  }
+
+  h4 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    color: #333;
+  }
+
+  h5 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 500;
+    color: #444;
+  }
+
+  h6 {
+    font-size: 1rem; /* 16px */
+    font-weight: 500;
+    color: #555;
+  }
+
+  /* Paragraphs and general text */
+  p {
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    color: #222; /* Dark gray */
+  }
+
+  /* Small text (less important information) */
+  small, .small-text {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 300;
+    color: #777; /* Lighter gray */
+  }
+
+  /* Muted text (very low priority info) */
+  .muted-text {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 300;
+    color: #999; /* Even lighter gray */
+  }
+
+  /* Links */
+a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: #003f80; /* Darker blue on hover */
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  /* Header */
+  .header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* Ensure full width */
+    height: 100px;
+    padding: 10px;
+    background: #fff;
+    z-index: 1000;
+  }
+
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 0.25rem /* 4px */;
+    padding-right: 0.5rem /* 8px */;
+    padding-left: 0.5rem /* 8px */;
+    border-radius: 1rem /* 16px */;
+    text-align: center;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .btn:hover {
+    background-color: rgb(220, 221, 223);
+  }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #000;
+    color: #000;
+  }
+
+  .btn-outline:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+
+
+/* Add this to your global styles or custom CSS */
+@media (max-width: 640px) {
+  .videoCard {
+    width: 100% !important; /* Make video cards full width on smaller devices */
+  }
+}
+
+
+/* components/BookCard.module.css */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .title {
+    font-size: 1.2em;
+    margin: 12px 0;
+  }
+  
+  .username {
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .likes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #005bb5;
+  }
+
+  /* styles/BookCard.module.css */
+.book-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.image-container {
+  flex: 0 0 100px;
+  margin-right: 10px;
+}
+
+.image-container img {
+  border-radius: 4px;
+  max-width: 100px;
+}
+
+.title-container {
+  flex: 1;
+}
+
+.title-container h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.poster-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  margin-right: 10px;
+}
+
+.profile-image img {
+  border-radius: 50%;
+}
+
+.poster-details p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.like-button,
+.download-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+
+.download-button {
+  background-color: #2ed573;
+  color: white;
+}
+
+/*QuestionCard Css*/
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profileImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.userDetails .username {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.userDetails .stats {
+  font-size: 14px;
+  color: #666;
+}
+
+.questionContent {
+  padding: 15px;
+}
+
+.questionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.questionDescription {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.viewMore {
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+}
+
+.viewMore:hover {
+  text-decoration: underline;
+}
